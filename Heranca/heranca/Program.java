@@ -5,9 +5,9 @@ public static void main(String[] args) {
     Object obj = meuCachorro;
     Animal umOutroAnimal = meuCachorro; 
 
-    System.err.println("meuAnimal eh um " + meuAnimal.getClass().getName());
-    System.err.println("meuCachorro eh um " + meuCachorro.getClass().getName());
-    System.err.println("obj eh um " + obj.getClass().getName());
-    System.err.println("umOutroAnimal eh um " + umOutroAnimal.getClass().getName());
+    System.out.println("meuAnimal eh um " + meuAnimal.getClass().getName());
+    System.out.println("meuCachorro eh um " + meuCachorro.getClass().getName());
+    System.out.println("obj eh um " + obj.getClass().getName());
+    System.out.println("umOutroAnimal eh um " + umOutroAnimal.getClass().getName());
     }
 }
