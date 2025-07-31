@@ -1,4 +1,4 @@
-package Classes_Objetos;
+package Classes_Objetos.personagem;
 
 
 public class PersonagemGame {
