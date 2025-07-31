@@ -10,7 +10,7 @@ public class PersonagemGame {
         return nome;
     }
     
-    public void saudeAtual(int saude) {
+    public void setSaudeAtual(int saude) {
         this.saudeAtual = saude;
     }
 
