@@ -5,14 +5,14 @@ public class Program {
         PersonagemGame personagem1 = new PersonagemGame();
         PersonagemGame personagem2 = new PersonagemGame();
 
-        personagem1.setNome("Sonic");
-        personagem1.setSaudeAtual(10);
+        personagem1.nome = "Sonic";
+        personagem1.saudeAtual = 10;
 
-        personagem2.setNome("Mario");
-        personagem2.setSaudeAtual(100);
+        personagem2.nome = "Mario";
+        personagem2.saudeAtual = 100;
 
-        System.out.printf("Nome: %s - Saude: %d\n", personagem1.getNome(), personagem1.getSaudeAtual());
-        System.out.printf("Nome: %s - Saude: %d\n", personagem2.getNome(), personagem2.getSaudeAtual());
+        System.out.printf("Nome: %s - Saude: %d\n", personagem1.nome, personagem1.saudeAtual);
+        System.out.printf("Nome: %s - Saude: %d\n", personagem2.nome, personagem2.saudeAtual);
 
     }
 }
