@@ -1,3 +1,6 @@
+package Classes_Objetos;
+
+
 public class PersonagemGame {
     private int saudeAtual;
     String nome;
