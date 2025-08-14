@@ -37,7 +37,7 @@ public class Pedido {
             resumo.append(String.format("Tipo: %s Titulo: %s Preco: %.2f Quant: %d Total: %.2f\n",
                     item.getProduto().getClass().getSimpleName(),
                     item.getProduto().getTitulo(),
-                    item.getProduto().getPrecoBruto() / item.getQuantidade(),
+                    item.getProduto().obterPrecoLiquido(),
                     item.getQuantidade(),
                     item.calcularValorItem()));
         }
