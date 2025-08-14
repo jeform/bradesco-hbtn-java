@@ -37,11 +37,11 @@ public class Pedido {
             resumo.append(String.format("Tipo: %s Titulo: %s Preco: %.2f Quant: %d Total: %.2f\n",
                     item.getProduto().getClass().getSimpleName(),
                     item.getProduto().getTitulo(),
-                    item.getProduto().getPrecoBruto(),
+                    item.getProduto().getPrecoBruto() / item.getQuantidade(),
                     item.getQuantidade(),
                     item.calcularValorItem()));
         }
-        resumo.append("-----------------------------\n");
+        resumo.append("----------------------------\n");
         double totalProdutos = 0.0;
         for (ItemPedido item : itens) {
             totalProdutos += item.calcularValorItem();
@@ -49,9 +49,9 @@ public class Pedido {
         double valorDesconto = totalProdutos * percentualDesconto / 100;
         resumo.append(String.format("DESCONTO: %.2f\n", valorDesconto));
         resumo.append(String.format("TOTAL PRODUTOS: %.2f\n", totalProdutos));
-        resumo.append("-----------------------------\n");
+        resumo.append("----------------------------\n");
         resumo.append("TOTAL PEDIDO: ").append(String.format("%.2f\n", calcularTotal()));
-        resumo.append("-----------------------------\n");
+        resumo.append("----------------------------\n");
         System.out.print(resumo.toString());
         return resumo.toString();
     }
