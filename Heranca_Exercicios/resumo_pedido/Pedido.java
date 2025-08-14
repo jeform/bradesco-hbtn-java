@@ -1,5 +1,4 @@
 
-import java.awt.event.ItemEvent;
 
 
 public class Pedido {
@@ -33,7 +32,7 @@ public class Pedido {
     public String apresentarResumoPedido() {
 
         StringBuilder resumo = new StringBuilder();
-        resumo.append("------- RESUMO DO PEDIDO -------\n");
+        resumo.append("------- RESUMO PEDIDO -------\n");
         for (ItemPedido item : itens) {
             resumo.append(String.format("Tipo: %s Titulo: %s Preco: %.2f Quant: %d Total: %.2f\n",
                     item.getProduto().getClass().getSimpleName(),
