@@ -34,7 +34,7 @@ public class Pedido {
         StringBuilder resumo = new StringBuilder();
         resumo.append("------- RESUMO PEDIDO -------\n");
         for (ItemPedido item : itens) {
-            resumo.append(String.format("Tipo: %s Titulo: %s Preco: %.2f Quant: %d Total: %.2f\n",
+            resumo.append(String.format("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f\n",
                     item.getProduto().getClass().getSimpleName(),
                     item.getProduto().getTitulo(),
                     item.getProduto().obterPrecoLiquido(),
