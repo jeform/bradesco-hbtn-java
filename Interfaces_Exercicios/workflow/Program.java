@@ -18,7 +18,7 @@ public class Program {
         Workflow workflowVideos = new Workflow();
 
         workflowVideos.registrarAtividade(new CarregarVideo());
-        workflowVideos.registrarAtividade(new CodificarVideo());
+        workflowVideos.registrarAtividade(new EnviarEmail());
 
         maquinaWorkflow.executar(workflowVideos);
 
