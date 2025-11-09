@@ -13,7 +13,7 @@ public class Program {
 
         maquinaWorkflow.executar(workflowEncodificarVideo);
 
-        System.err.println("-----");
+        System.out.println("-----");
 
         Workflow workflowVideos = new Workflow();
 
@@ -22,7 +22,7 @@ public class Program {
 
         maquinaWorkflow.executar(workflowVideos);
 
-        System.err.println("-----");
+        System.out.println("-----");
 
          Workflow workflowVideoStatus = new Workflow();
 
