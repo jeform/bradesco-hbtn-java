@@ -25,10 +25,15 @@ public class Blog {
     }
 
     public Map<Categorias, Integer> obterContagemPorCategoria() {
-        Map<Categorias, Integer> contagem = new HashMap<>();
+        Map<Categorias, Integer> contagem = new LinkedHashMap<>();
+        // Initialize with enum order
+        for (Categorias cat : Categorias.values()) {
+            contagem.put(cat, 0);
+        }
+        // Count posts
         for (Post post : postagens) {
             Categorias categoria = post.getCategoria();
-            contagem.put(categoria, contagem.getOrDefault(categoria, 0) + 1);
+            contagem.put(categoria, contagem.get(categoria) + 1);
         }
         return contagem;
     }
@@ -54,12 +59,14 @@ public class Blog {
     }
 
     public Map<Categorias, Set<Post>> obterTodosPostsPorCategorias() {
-        Map<Categorias, Set<Post>> postsPorCategoria = new HashMap<>();
+        Map<Categorias, Set<Post>> postsPorCategoria = new LinkedHashMap<>();
+        // Initialize with enum order
+        for (Categorias cat : Categorias.values()) {
+            postsPorCategoria.put(cat, new TreeSet<>());
+        }
+        // Add posts
         for (Post post : postagens) {
             Categorias categoria = post.getCategoria();
-            if (!postsPorCategoria.containsKey(categoria)) {
-                postsPorCategoria.put(categoria, new TreeSet<>());
-            }
             postsPorCategoria.get(categoria).add(post);
         }
         return postsPorCategoria;
