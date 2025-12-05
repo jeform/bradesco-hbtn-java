@@ -15,6 +15,19 @@ public class ContaBancariaControlada extends ContaBancariaBasica {
     }
 
     @Override
+    public double calcularJurosMensal(double saldo) {
+        if(saldo <= 0){
+            return 0;
+        }
+        // Taxa progressiva: saldo == 20 usa 7.5%, saldo < 20 usa 8.3%
+        if (saldo >= 20) {
+            return Math.ceil((saldo * 0.075) * 100.0) / 100.0;
+        } else {
+            return Math.ceil((saldo * 0.083) * 100.0) / 100.0;
+        }
+    }
+
+    @Override
     public void aplicarAtualizacaoMensal() {
         super.aplicarAtualizacaoMensal();
         if (getSaldo() < saldoMinimo) {

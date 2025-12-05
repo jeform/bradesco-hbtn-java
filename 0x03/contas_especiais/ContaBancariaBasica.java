@@ -65,11 +65,14 @@ public class ContaBancariaBasica {
             return 0;
         }
         // taxa progressiva baseada no saldo
+        double juros;
         if(saldo >= 500){
-            return (saldo * 1.2) / 12; // 10% mensal para saldos >= 500
+            juros = (saldo * 1.2) / 12; // 10% mensal para saldos >= 500
         } else {
-            return (saldo * 0.9) / 12; // 7.5% mensal para saldos < 500
+            juros = (saldo * 0.9) / 12; // 7.5% mensal para saldos < 500
         }
+        // Arredonda para cima em 2 casas decimais
+        return Math.ceil(juros * 100.0) / 100.0;
     }  
     
     public void aplicarAtualizacaoMensal() {
