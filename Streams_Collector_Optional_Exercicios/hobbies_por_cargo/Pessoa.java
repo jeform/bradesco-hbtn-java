@@ -1,5 +1,5 @@
-import java.util.Locale;
 import java.util.List;
+import java.util.Locale;
 
 public class Pessoa implements Comparable<Pessoa> {
     private int codigo;
